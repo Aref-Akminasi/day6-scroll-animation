@@ -5,7 +5,8 @@ checkBoxes();
 function checkBoxes() {
   const triggerBottom = (window.innerHeight / 5) * 4;
   boxes.forEach((box) => {
-    const boxTop = box.getBoundingClientRect().top; //getBoundingClientRect gets the data of where is an element placed relative to the clients window
+    const boxTop = box.getBoundingClientRect().top; //getBoundingClientRect gets the data of where is an element placed relative to the viewport
+    console.log(boxTop);
     if (boxTop < triggerBottom) {
       box.classList.add('show');
     } else {
